@@ -41,10 +41,10 @@ All queries are in the [`sql/`](sql/) folder, one question per file. They are ru
 | 2 | `02_top_categories.sql` | Top 10 product categories by revenue | 3-table JOIN, ORDER BY, LIMIT |
 | 3 | `03_revenue_by_state.sql` | Orders and average order value by customer state | JOIN, AVG |
 | 4 | `04_delivery_time_by_state.sql` | Average and median delivery time by state | DATE_DIFF, NULL handling, MEDIAN |
-| 5 | `05_orders_share_late.sql` | Share of orders delivered early, on time or late | CASE WHEN, window share |
+| 5 | `05_late_delivery_share.sql` | Share of orders delivered early, on time or late | CASE WHEN, window share |
 | 6 | `06_review_score.sql` | Average review score by delivery status | JOIN, CASE WHEN |
-| 7 | `07_customers_share_2orders.sql` | Share of customers with 2+ orders | CTE, COUNT FILTER |
-| 8 | `08_payments_share.sql` | Payment method shares and average instalments | CTE, `SUM() OVER ()` |
+| 7 | `07_repeat_customers.sql` | Share of customers with 2+ orders | CTE, COUNT FILTER |
+| 8 | `08_payments_methods_share.sql` | Payment method shares and average instalments | CTE, `SUM() OVER ()` |
 | 9 | `09_running_revenue.sql` | Running total of revenue | `SUM() OVER (ORDER BY ...)` |
 | 10 | `10_top_sellers_state.sql` | Top 3 sellers per state | `RANK() OVER (PARTITION BY ...)` |
 
